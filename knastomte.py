@@ -98,10 +98,10 @@ def main():
         for row in zip(*t):
             wr.writerow(row)
 
-    # output a nice message
-    gross_total = sum(row[columns.index('invoice_total')] for row in table)
-    net_total = gross_total - sum(row[columns.index('tax_total')] for row in table)
-    print('Converted %i invoices. Gross %.2f EUR = net %.2f EUR. Written to "%s".' % (len(table), gross_total, net_total, options.output_file))
+    # show we did something
+    gross_total = sum(row[columns.index('fldDebet')]+row[columns.index('fldCredit')] for row in table if row[columns.index('booking_no')]==1300)
+    net_total = sum(row[columns.index('fldDebet')]+row[columns.index('fldCredit')] for row in table if row[columns.index('booking_no')]==8200)
+    print('Converted %i invoices. Gross %.2f EUR = net %.2f EUR. Written to "%s".' % (len(table)//3, gross_total, net_total, options.output_file))
 
     try:
         os.mkdir(today)
