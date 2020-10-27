@@ -1,0 +1,18 @@
+fldDagboek;fldBoekingcode;fldDatum;fldGrootboeknummer;fldDebet;fldCredit;fldOmschrijving;fldRelatiecode;fldFactuurnummer;
+1300;1;10-12-2019;1300;363;0;Verkoopfactuur geimporteerd;2;20190025;	
+1300;1;10-12-2019;8002;0;300;Verkoopfactuur geimporteerd;2;20190025;	
+1300;1;10-12-2019;1602;0;63;Verkoopfactuur geimporteerd;2;20190025;	
+1000;2;15-12-2019;1000;200;0;KAS geimporteerd test;					
+1000;2;15-12-2019;8000;0;200;KAS geimporteerd test;					
+1300;3;20-12-2019;1300;121;0;Verkoopfactuur geimporteerd;3;20190078;	
+1300;3;20-12-2019;8002;0;100;Verkoopfactuur geimporteerd;3;20190078;	
+1300;3;20-12-2019;1602;0;21;Verkoopfactuur geimporteerd;3;20190078;	
+1600;4;21-12-2019;1600;0;227;Inkoopfactuur geimporteerd;4;258369147;	
+1600;4;21-12-2019;7002;100;0;Inkoopfactuur geimporteerd;4;258369147;	
+1600;4;21-12-2019;1612;21;0;Inkoopfactuur geimporteerd;	4;258369147;	
+1600;4;21-12-2019;7001;100;0;Inkoopfactuur geimporteerd;4;258369147;	
+1600;4;21-12-2019;1611;6;0;Inkoopfactuur geimporteerd;4;258369147;	
+2011;5;31-12-2019;1602;84;0;Btw boeking eindejaar import;			
+2011;5;31-12-2019;1611;0;6;Btw boeking eindejaar import;			
+2011;5;31-12-2019;1612;0;21;Btw boeking eindejaar import;			
+2011;5;31-12-2019;1625;0;57;Btw boeking eindejaar import;	
