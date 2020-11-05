@@ -75,12 +75,12 @@ def main():
                     allocation_code = allocation_lookup[allocation]
                     allocs += [(allocation_code,allocation)]
                 allocation_code, allocation = sorted(allocs)[0]
-                table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, tax_total, tax_total_s, -invoice_total, invoice_total_s, allocation_code, 1300]]
-                table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, tax_total, tax_total_s, +invoice_gross, invoice_total_s, allocation_code, 8200]]
-                table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, tax_total, tax_total_s,     +tax_total, invoice_total_s, allocation_code, 1602]]
+                table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, tax_total, tax_total_s, -invoice_total, invoice_total_s, allocation_code, allocation_lookup['Debiteuren']]]
+                table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, tax_total, tax_total_s, +invoice_gross, invoice_total_s, allocation_code, allocation_code]]
+                table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, tax_total, tax_total_s,     +tax_total, invoice_total_s, allocation_code, allocation_lookup['BTW']]]
                 invoice_index += 1
 
-    add_col(table, 'invoice_index',     'fldDagboek', lambda i: 70)
+    add_col(table, 'invoice_index',     'fldDagboek', lambda i: allocation_lookup['fldDagboek'])
     add_col(table, 'invoice_index',     'fldBoekingcode', lambda s: s)
     add_col(table, 'invoice_date',      'fldDatum', lambda s: '-'.join(reversed(s.split('-'))))
     add_col(table, 'booking_no',        'fldGrootboeknummer', lambda x: x)
