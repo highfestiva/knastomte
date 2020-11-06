@@ -43,7 +43,8 @@ def move_files(today, files):
     except:
         pass
     for fname,fobj in files:
-        os.rename(fname, today+'/'+fname)
+        tgt_fname = os.path.basename(fname)
+        os.rename(fname, today+'/'+tgt_fname)
 
 
 def main(options):
@@ -125,10 +126,10 @@ def main(options):
 
 
 if __name__ == '__main__':
-    print('knastomte v0.1')
+    print('knastomte v0.2')
     parser = argparse.ArgumentParser()
     today = timestamp2day()
-    parser.add_argument('-i', '--input-wildcard', default='*.xml', help='invoice XML files to process')
+    parser.add_argument('-i', '--input-wildcard', default='input/*.xml', help='invoice XML files to process')
     parser.add_argument('-o', '--output-file', default='verkoopfactuur-import-'+today+'.csv', help='output Excel file for import into SnelStart')
     options = parser.parse_args()
     options.today = today
