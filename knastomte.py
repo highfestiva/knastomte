@@ -88,7 +88,7 @@ def main(options):
                     invoice_gross = invoice_item.find('ns:gross_amount', ns).text
                     invoice_gross = float(invoice_gross)
                     invoice_net = invoice_gross - tax_total
-                    print(invoice_gross, invoice_net, tax_total)
+                    # print(invoice_gross, invoice_net, tax_total)
                     invoice_total_s = '?'
 
                     allocation = invoice_item.find('ns:allocation_code_name', ns).text
@@ -134,7 +134,7 @@ def main(options):
 
 
 if __name__ == '__main__':
-    print('knastomte v0.2')
+    print('knastomte v0.3')
     parser = argparse.ArgumentParser()
     today = timestamp2day()
     parser.add_argument('-i', '--input-wildcard', default='input/*.xml', help='invoice XML files to process')
