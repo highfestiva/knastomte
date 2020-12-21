@@ -97,9 +97,9 @@ def main(options):
                         # print('FATAL: no such allocation %s in allocation.cfg' % allocation)
                         # return
                     # allocation_code = allocation_lookup[allocation]
-                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s, -invoice_gross, invoice_total_s, 'debit',  allocation_lookup['Debiteuren'], gl_code_name]]
-                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s,   +invoice_net, invoice_total_s, 'credit', allocation_lookup['fldDagboek'], gl_code_name]]
-                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s,     +tax_total, invoice_total_s, 'tax',    allocation_lookup['BTW'], gl_code_name]]
+                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s, -invoice_gross, invoice_total_s, 'debit',  allocation_lookup['Debiteuren'],   gl_code_name]]
+                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s,   +invoice_net, invoice_total_s, 'credit', allocation_lookup['fldDagboek'],   gl_code_name]]
+                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s,     +tax_total, invoice_total_s, 'tax',    gl_code_name,                      gl_code_name]]
                 invoice_index += 1
 
     add_col(table, 'allocation_lookup', 'fldDagboek', lambda s: s)
