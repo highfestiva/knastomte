@@ -4,6 +4,7 @@ import argparse
 import csv
 from datetime import datetime
 import dateutil.parser
+from decimal import *
 from glob import glob
 import os
 from time import time
@@ -14,6 +15,9 @@ columns = [ 'allocation', 'invoice_index', 'invoice_no', 'invoice_date', 'pay_da
             'tax_total', 'tax_total_s', 'invoice_total', 'invoice_total_s', 'allocation_code',
             'allocation_lookup', 'gl_code_name',
           ]
+
+
+getcontext().rounding = ROUND_HALF_UP
 
 
 def add_col(table, inp_col, new_col, func):
@@ -83,10 +87,10 @@ def main(options):
                 allocs = []
                 for invoice_item in invoice.findall('ns:invoice_item', ns):
                     tax_total = invoice_item.find('ns:total_tax_amount', ns).text
-                    tax_total = float(tax_total)
+                    tax_total = round(Decimal(tax_total), 4)
                     tax_total_s = '?'
                     invoice_gross = invoice_item.find('ns:gross_amount', ns).text
-                    invoice_gross = float(invoice_gross)
+                    invoice_gross = round(Decimal(invoice_gross), 4)
                     invoice_net = invoice_gross - tax_total
                     # print(invoice_gross, invoice_net, tax_total)
                     invoice_total_s = '?'
@@ -97,17 +101,17 @@ def main(options):
                         # print('FATAL: no such allocation %s in allocation.cfg' % allocation)
                         # return
                     # allocation_code = allocation_lookup[allocation]
-                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s, -invoice_gross, invoice_total_s, 'debit',  allocation_lookup['Debiteuren'],   gl_code_name]]
+                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s, -invoice_gross, invoice_total_s, 'debit',  allocation_lookup['fldDagboek'],   allocation_lookup['fldDagboek']]]
                     table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s,   +invoice_net, invoice_total_s, 'credit', allocation_lookup['fldDagboek'],   gl_code_name]]
-                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s,     +tax_total, invoice_total_s, 'tax',    gl_code_name,                      gl_code_name]]
+                    table += [[allocation, invoice_index, invoice_number, invoice_date, payment_date, customer_id, customer_name, tax_total, tax_total_s,     +tax_total, invoice_total_s, 'tax',    allocation_lookup['fldDagboek'],   allocation_lookup['BTW']]]
                 invoice_index += 1
 
     add_col(table, 'allocation_lookup', 'fldDagboek', lambda s: s)
     add_col(table, 'invoice_index',     'fldBoekingcode', lambda s: s)
     add_col(table, 'invoice_date',      'fldDatum', lambda s: '-'.join(reversed(s.split('-'))))
     add_col(table, 'gl_code_name',      'fldGrootboeknummer', lambda x: x)
-    add_col(table, 'invoice_total',     'fldDebet', lambda x: ('%.2f'%round(-x,2) if x<0 else '0.00'))
-    add_col(table, 'invoice_total',     'fldCredit', lambda x: ('%.2f'%round(x,2) if x>0 else '0.00'))
+    add_col(table, 'invoice_total',     'fldDebet', lambda x: ('%s'%round(-x,4) if x<0 else '0.0000'))
+    add_col(table, 'invoice_total',     'fldCredit', lambda x: ('%s'%round(x,4) if x>0 else '0.0000'))
     add_col(table, 'customer_name',     'fldOmschrijving', lambda s: s)
     # append ' $invoice_no' to customer names
     for row in table:
@@ -134,7 +138,7 @@ def main(options):
 
 
 if __name__ == '__main__':
-    print('knastomte v0.3')
+    print('knastomte v0.5')
     parser = argparse.ArgumentParser()
     today = timestamp2day()
     parser.add_argument('-i', '--input-wildcard', default='input/*.xml', help='invoice XML files to process')
