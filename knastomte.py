@@ -76,8 +76,8 @@ def main(options):
                 timestamp = dateutil.parser.parse(payment_date).timestamp()
                 payment_date = datetime.fromtimestamp(timestamp).isoformat().partition('T')[0]
                 invoice_number = invoice.find('ns:invoice_number', ns).text
-                invoice_gross_total = Decimal('0.0000')
-                invoice_tax_total   = Decimal('0.0000')
+                invoice_gross_total = Decimal('0.00')
+                invoice_tax_total   = Decimal('0.00')
                 allocs = []
                 for invoice_item in invoice.findall('ns:invoice_item', ns):
                     tax_total = invoice_item.find('ns:total_tax_amount', ns).text
@@ -99,8 +99,8 @@ def main(options):
     add_col(table, 'invoice_index',     'fldBoekingcode', lambda s: s)
     add_col(table, 'invoice_date',      'fldDatum', lambda s: '-'.join(reversed(s.split('-'))))
     add_col(table, 'gl_code_name',      'fldGrootboeknummer', lambda x: x)
-    add_col(table, 'invoice_total',     'fldDebet',  lambda x: ('%s'%(-x if x<0 else '0.0000')))
-    add_col(table, 'invoice_total',     'fldCredit', lambda x: ('%s'%(+x if x>0 else '0.0000')))
+    add_col(table, 'invoice_total',     'fldDebet',  lambda x: ('%.2f'%round(-x,2) if x<0 else '0.00'))
+    add_col(table, 'invoice_total',     'fldCredit', lambda x: ('%.2f'%round(+x,2) if x>0 else '0.00'))
     add_col(table, 'customer_name',     'fldOmschrijving', lambda s: s)
     # append ' $invoice_no' to customer names
     for row in table:
