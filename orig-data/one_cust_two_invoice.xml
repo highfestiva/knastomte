@@ -1,0 +1,267 @@
+<invoice_batch_generic xmlns="http://tempuri.org/invoice_batch_generic.xsd">
+	<invoice_batch>
+		<batch_id>15</batch_id>
+		<create_date>2020-12-15T10:12:01.3-05:00</create_date>
+		<create_by_id>29682889</create_by_id>
+		<batch_data />
+	</invoice_batch>
+	<account>
+		<account_id>325</account_id>
+		<parent_name />
+		<creator_name>Hoogschagen, Bert</creator_name>
+		<narrative_creator_name>Bert Hoogschagen</narrative_creator_name>
+		<territory_name />
+		<cust_id>400370</cust_id>
+		<cust_name>Jonkman Coating</cust_name>
+		<taxable>Yes</taxable>
+		<addr1>Beitelstraat 16</addr1>
+		<addr2 />
+		<city>HENGELO</city>
+		<account_region />
+		<country />
+		<postal_code>7556 NC</postal_code>
+		<phone>074 291 68 75</phone>
+		<fax />
+		<attention />
+		<billing_addr1>Beitelstraat 16</billing_addr1>
+		<billing_addr2 />
+		<billing_city>HENGELO</billing_city>
+		<billing_region />
+		<billing_country />
+		<billing_postal_code>7556 NC</billing_postal_code>
+		<billing_attention />
+		<tax_id />
+		<tax_group_name>Binnenland</tax_group_name>
+		<parent_id />
+		<payment_term_name>Incasso binnen 8 dagen</payment_term_name>
+		<account_invoice_email_recipient>inkoop@jonkman-coating.nl</account_invoice_email_recipient>
+		<invoice>
+			<invoice_id>282</invoice_id>
+			<account_id>325</account_id>
+			<owner_name>Doodeman, Isabel</owner_name>
+			<narrative_owner_name>Isabel Doodeman</narrative_owner_name>
+			<invoice_date>2020-12-15T00:00:00-05:00</invoice_date>
+			<entry_time_stamp>2020-12-15T10:12:01.34-05:00</entry_time_stamp>
+			<invoice_number>2020.0112</invoice_number>
+			<comments>Invoice Note</comments>
+			<invoice_total>1464.2000</invoice_total>
+			<total_tax_value>307.4820</total_tax_value>
+			<tax_description />
+			<tax_group />
+			<date_range_from>2020-12-01T00:00:00-05:00</date_range_from>
+			<date_range_to>2020-12-31T00:00:00-05:00</date_range_to>
+			<purchase_order_number />
+			<payment_term_name>Incasso binnen 8 dagen</payment_term_name>
+			<batch_id>15</batch_id>
+			<invoice_transferred_flag>No</invoice_transferred_flag>
+			<payment_due_date>2020-12-23T00:00:00-05:00</payment_due_date>
+			<business_division_subdivision_name />
+			<taxes>
+				<taxregion>
+					<tax_region_name>Binnenland</tax_region_name>
+					<taxregioncategory>
+						<tax_category_name>BTW Hoog</tax_category_name>
+						<total_tax_rate_per_category_and_region>0.2100000</total_tax_rate_per_category_and_region>
+						<total_tax_amount>307.48200</total_tax_amount>
+					</taxregioncategory>
+				</taxregion>
+			</taxes>
+			<invoice_item>
+				<invoice_item_id>1</invoice_item_id>
+				<invoice_id>282</invoice_id>
+				<item_name>Exch-beheer 10-25 Off365 [Dec 01, 2020 - Dec 31, 2020]</item_name>
+				<item_id>1048</item_id>
+				<item_date>2020-12-01T00:00:00-05:00</item_date>
+				<adjusted_item_id />
+				<type_of_transaction>Recurring Service</type_of_transaction>
+				<allocation_code_name>Service packs</allocation_code_name>
+				<allocation_code_external_number>8460</allocation_code_external_number>
+				<allocation_code_non_billable>No</allocation_code_non_billable>
+				<allocation_code_taxable>Yes</allocation_code_taxable>
+				<task_or_ticket_number />
+				<task_or_ticket_title>Recurring Service</task_or_ticket_title>
+				<ticket_contact />
+				<narrative_ticket_contact />
+				<adjustment_reason />
+				<resource_name>Doodeman, Isabel</resource_name>
+				<narrative_resource_name>Isabel Doodeman</narrative_resource_name>
+				<resource_payroll_identifier />
+				<role_name />
+				<department>Administration</department>
+				<project_name />
+				<project_lead />
+				<narrative_project_lead />
+				<external_project_number />
+				<internal_project_number />
+				<gl_code_desc>Contracten en abonnementen (Packs)</gl_code_desc>
+				<gl_code_name>8460 Contracten (A&amp;M)</gl_code_name>
+				<contract_name>ICT Beheer Computer, Server, Netwerk met helpdesk</contract_name>
+				<external_contract_number />
+				<worked_hours>0.0000</worked_hours>
+				<non_billable_hours>0.0000</non_billable_hours>
+				<billable_hours>0.0000</billable_hours>
+				<hourly_billing_rate>25.0000</hourly_billing_rate>
+				<extended_price>22.5050</extended_price>
+				<time_entry_summary_notes />
+				<quantity>1.0000</quantity>
+				<expense_type />
+				<installed_product_name />
+				<subscription_name />
+				<subscription_desc />
+				<subscription_cost>0.00</subscription_cost>
+				<milestone_title />
+				<milestone_description />
+				<milestone_amount>0.0000</milestone_amount>
+				<service_or_bundle_id>101</service_or_bundle_id>
+				<service_name>Exch-beheer 10-25 Off365</service_name>
+				<service_invoice_description>Office 365 Cloud Exchange Beheer: aanmaken / wijzigen mailboxen, wachtwoord reset, controle op werking (10 tot 25 mailboxen)</service_invoice_description>
+				<service_units>1</service_units>
+				<service_unit_price>22.5050</service_unit_price>
+				<service_extended_price>22.5050</service_extended_price>
+				<service_period_start_date>2020-12-01T00:00:00-05:00</service_period_start_date>
+				<service_period_end_date>2020-12-31T00:00:00-05:00</service_period_end_date>
+				<setup_fee>0.0000</setup_fee>
+				<billing_approved_by>Doodeman, Isabel</billing_approved_by>
+				<narrative_billing_approved_by>Isabel Doodeman</narrative_billing_approved_by>
+				<approved_date>2020-12-15T10:10:21.167-05:00</approved_date>
+				<posted_date>2020-12-14T19:00:00-05:00</posted_date>
+				<non_overage_retainer_line_item_tax>0.0000</non_overage_retainer_line_item_tax>
+				<gross_amount>22.5050</gross_amount>
+				<contract_type>7</contract_type>
+				<department_number />
+				<effective_hourly_billing_rate>25.0000</effective_hourly_billing_rate>
+				<external_product_id />
+				<cost_description />
+				<project_phase />
+				<our_cost>0.0000</our_cost>
+				<expense_description />
+				<line_item_id>7</line_item_id>
+				<tax_region_and_category_id>1</tax_region_and_category_id>
+				<tax_region_name>Binnenland</tax_region_name>
+				<tax_category_name>BTW Hoog</tax_category_name>
+				<total_tax_rate_per_region_and_category>0.2100000</total_tax_rate_per_region_and_category>
+				<total_tax_amount>4.7250</total_tax_amount>
+				<allocation_code_id>29682901</allocation_code_id>
+				<serial_number>0583-8685-9289-4651-2846-0512-07</serial_number>
+				<contract_period_type>m</contract_period_type>
+				<service_period_type>m</service_period_type>
+				<account_manager_when_posted>Hoogschagen, Bert</account_manager_when_posted>
+				<business_division_subdivision_name />
+			</invoice_item>
+		</invoice>
+		<invoice>
+			<invoice_id>282</invoice_id>
+			<account_id>325</account_id>
+			<owner_name>Doodeman, Isabel</owner_name>
+			<narrative_owner_name>Isabel Doodeman</narrative_owner_name>
+			<invoice_date>2020-12-15T00:00:00-05:00</invoice_date>
+			<entry_time_stamp>2020-12-15T10:12:01.34-05:00</entry_time_stamp>
+			<invoice_number>2020.0112</invoice_number>
+			<comments>Invoice Note</comments>
+			<invoice_total>1464.2000</invoice_total>
+			<total_tax_value>307.4820</total_tax_value>
+			<tax_description />
+			<tax_group />
+			<date_range_from>2020-12-01T00:00:00-05:00</date_range_from>
+			<date_range_to>2020-12-31T00:00:00-05:00</date_range_to>
+			<purchase_order_number />
+			<payment_term_name>Incasso binnen 8 dagen</payment_term_name>
+			<batch_id>15</batch_id>
+			<invoice_transferred_flag>No</invoice_transferred_flag>
+			<payment_due_date>2020-12-23T00:00:00-05:00</payment_due_date>
+			<business_division_subdivision_name />
+			<taxes>
+				<taxregion>
+					<tax_region_name>Binnenland</tax_region_name>
+					<taxregioncategory>
+						<tax_category_name>BTW Hoog</tax_category_name>
+						<total_tax_rate_per_category_and_region>0.2100000</total_tax_rate_per_category_and_region>
+						<total_tax_amount>307.48200</total_tax_amount>
+					</taxregioncategory>
+				</taxregion>
+			</taxes>
+			<invoice_item>
+				<invoice_item_id>1</invoice_item_id>
+				<invoice_id>282</invoice_id>
+				<item_name>Exch-beheer 10-25 Off365 [Dec 01, 2020 - Dec 31, 2020]</item_name>
+				<item_id>1048</item_id>
+				<item_date>2020-12-01T00:00:00-05:00</item_date>
+				<adjusted_item_id />
+				<type_of_transaction>Recurring Service</type_of_transaction>
+				<allocation_code_name>Service packs</allocation_code_name>
+				<allocation_code_external_number>8460</allocation_code_external_number>
+				<allocation_code_non_billable>No</allocation_code_non_billable>
+				<allocation_code_taxable>Yes</allocation_code_taxable>
+				<task_or_ticket_number />
+				<task_or_ticket_title>Recurring Service</task_or_ticket_title>
+				<ticket_contact />
+				<narrative_ticket_contact />
+				<adjustment_reason />
+				<resource_name>Doodeman, Isabel</resource_name>
+				<narrative_resource_name>Isabel Doodeman</narrative_resource_name>
+				<resource_payroll_identifier />
+				<role_name />
+				<department>Administration</department>
+				<project_name />
+				<project_lead />
+				<narrative_project_lead />
+				<external_project_number />
+				<internal_project_number />
+				<gl_code_desc>Contracten en abonnementen (Packs)</gl_code_desc>
+				<gl_code_name>8460 Contracten (A&amp;M)</gl_code_name>
+				<contract_name>ICT Beheer Computer, Server, Netwerk met helpdesk</contract_name>
+				<external_contract_number />
+				<worked_hours>0.0000</worked_hours>
+				<non_billable_hours>0.0000</non_billable_hours>
+				<billable_hours>0.0000</billable_hours>
+				<hourly_billing_rate>25.0000</hourly_billing_rate>
+				<extended_price>22.5050</extended_price>
+				<time_entry_summary_notes />
+				<quantity>1.0000</quantity>
+				<expense_type />
+				<installed_product_name />
+				<subscription_name />
+				<subscription_desc />
+				<subscription_cost>0.00</subscription_cost>
+				<milestone_title />
+				<milestone_description />
+				<milestone_amount>0.0000</milestone_amount>
+				<service_or_bundle_id>101</service_or_bundle_id>
+				<service_name>Exch-beheer 10-25 Off365</service_name>
+				<service_invoice_description>Office 365 Cloud Exchange Beheer: aanmaken / wijzigen mailboxen, wachtwoord reset, controle op werking (10 tot 25 mailboxen)</service_invoice_description>
+				<service_units>1</service_units>
+				<service_unit_price>22.5050</service_unit_price>
+				<service_extended_price>22.5050</service_extended_price>
+				<service_period_start_date>2020-12-01T00:00:00-05:00</service_period_start_date>
+				<service_period_end_date>2020-12-31T00:00:00-05:00</service_period_end_date>
+				<setup_fee>0.0000</setup_fee>
+				<billing_approved_by>Doodeman, Isabel</billing_approved_by>
+				<narrative_billing_approved_by>Isabel Doodeman</narrative_billing_approved_by>
+				<approved_date>2020-12-15T10:10:21.167-05:00</approved_date>
+				<posted_date>2020-12-14T19:00:00-05:00</posted_date>
+				<non_overage_retainer_line_item_tax>0.0000</non_overage_retainer_line_item_tax>
+				<gross_amount>9.5050</gross_amount>
+				<contract_type>7</contract_type>
+				<department_number />
+				<effective_hourly_billing_rate>25.0000</effective_hourly_billing_rate>
+				<external_product_id />
+				<cost_description />
+				<project_phase />
+				<our_cost>0.0000</our_cost>
+				<expense_description />
+				<line_item_id>7</line_item_id>
+				<tax_region_and_category_id>1</tax_region_and_category_id>
+				<tax_region_name>Binnenland</tax_region_name>
+				<tax_category_name>BTW Hoog</tax_category_name>
+				<total_tax_rate_per_region_and_category>0.2100000</total_tax_rate_per_region_and_category>
+				<total_tax_amount>4.1550</total_tax_amount>
+				<allocation_code_id>29682901</allocation_code_id>
+				<serial_number>0583-8685-9289-4651-2846-0512-07</serial_number>
+				<contract_period_type>m</contract_period_type>
+				<service_period_type>m</service_period_type>
+				<account_manager_when_posted>Hoogschagen, Bert</account_manager_when_posted>
+				<business_division_subdivision_name />
+			</invoice_item>
+		</invoice>
+	</account>
+</invoice_batch_generic>
